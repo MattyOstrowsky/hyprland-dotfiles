@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ "$1" == "menu" ]; then
+    rofi -show drun
+fi

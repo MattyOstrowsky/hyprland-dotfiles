@@ -1,0 +1,12 @@
+(defpoll icon :initial "" :interval "1m" "bash ~/.config/eww/scripts/update icon") 
+
+(
+  defwidget updates [] 
+  (
+    eventbox  :onclick "~/.config/eww/scripts/popup update"
+    (
+      label :text icon
+            :tooltip "Updates"
+    )
+  )
+)

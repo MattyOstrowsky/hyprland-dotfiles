@@ -1,0 +1,4 @@
+#!/bin/bash
+
+window="$1"
+eww open "$window" --toggle --config "$HOME/.config/eww/$window"

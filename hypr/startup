@@ -1,0 +1,12 @@
+#!/bin/bash
+
+eww daemon
+swww init
+for file in ~/.config/hypr/wallpapers/*.jpg
+do
+    swww img "$file"
+    break
+done
+
+eww open topbar --config ~/.config/eww/topbar
+eww open topbar-external --config ~/.config/eww/topbar-external

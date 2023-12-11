@@ -1,0 +1,15 @@
+(defpoll iconbat :initial "" :interval "5s" "bash ~/.config/eww/scripts/battery icon") 
+(defpoll prc :initial "" :interval "5s" "bash ~/.config/eww/scripts/battery level") 
+
+(
+  defwidget battery [] 
+  (
+    box :class "battery"
+    (
+        button	:class "battery-btn"				
+                :tooltip "Battery"	 
+                :onclick "bash ~/.config/eww/scripts/battery run"
+        "${iconbat} ${prc}%" 
+    )
+  )
+)

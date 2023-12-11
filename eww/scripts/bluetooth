@@ -1,0 +1,14 @@
+#!/bin/bash
+
+symbol() {
+    bluetooth_status=$(systemctl is-active bluetooth)
+
+    if [ "$bluetooth_status" = "active" ]; then
+        echo "󰂯"
+    else
+        echo "󰂲"
+    fi
+}
+
+[ "$1" = "icon" ] && symbol && exit
+[ "$1" = "run" ] && blueman-manager && exit
