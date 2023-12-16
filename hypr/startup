@@ -1,13 +1,10 @@
 #!/bin/bash
 
-eww daemon --config "$HOME/.config/eww/menu"
-swww init
-for file in ~/.config/hypr/wallpapers/*.jpg
-do
-    swww img "$file"
-    break
-done
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
-waybar &
-nm-applet &
-blueman-applet
+eww daemon --config "$HOME/.config/eww/menu"
+# swww init
+# swww img ~/.config/hypr/wallpapers/4k/1.gif
+waybar 
+nm-applet 
+blueman-applet 
