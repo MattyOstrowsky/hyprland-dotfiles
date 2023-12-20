@@ -17,6 +17,7 @@ window#waybar{
 }
 #battery{
     padding: 0px 12px 0px 8px;
+    background-color: #a6e3a1
 }
 #workspaces{
     background-color: #313244;
@@ -62,7 +63,7 @@ window#waybar{
     margin: 5px 5px;
     font-weight: 600;
 }
-#cpu,#memory,#temperature {
+#cpu,#memory,#temperature, #battery{
     font-weight: 600;
     margin: 3px 5px;
     padding: 0px 10px;

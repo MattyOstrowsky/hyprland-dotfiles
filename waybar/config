@@ -53,10 +53,14 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 1,
+        "on-click": "bash ~/.config/eww/scripts/battery run"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "interval": 1,        
+        "on-click": "bash ~/.config/eww/scripts/battery run"
     },
     "bluetooth": {
         "format": "{status} ",
@@ -70,7 +74,9 @@
     },
     "temperature": {
         "critical-threshold": 80,
-        "format": "{temperatureC} 󰏈"
+        "interval":1,
+        "format": "{temperatureC} 󰏈",
+        "on-click": "bash ~/.config/eww/scripts/battery run"
     },
     "backlight": {
         "format": "{percent} {icon}",

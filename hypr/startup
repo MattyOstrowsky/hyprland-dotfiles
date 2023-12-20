@@ -1,10 +1,11 @@
 #!/bin/bash
 
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+#dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
-eww daemon --config "$HOME/.config/eww/menu"
-# swww init
-# swww img ~/.config/hypr/wallpapers/4k/1.gif
-waybar 
-nm-applet 
-blueman-applet 
+swww init
+swww img ~/.config/hypr/wallpapers/1.jpg
+
+eww daemon --config "$HOME/.config/eww/menu" 
+
+nm-applet &
+blueman-applet
